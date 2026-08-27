@@ -277,7 +277,9 @@ public final class ModuleSystem {
         ev.log(Events.PERF_START, "ModuleSystem.readList"); // NOI18N
         mgr.mutexPrivileged().enterWriteAccess();
         try {
+            System.out.println("[JVDBG] ModuleSystem.readList start");
             list.readInitial();
+            System.out.println("[JVDBG] ModuleSystem.readList done");
         } finally {
             mgr.mutexPrivileged().exitWriteAccess();
         }

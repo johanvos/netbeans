@@ -94,7 +94,11 @@ final class TopThreadGroup extends ThreadGroup implements Runnable {
     @Override
     public void run() {
         try {
+System.out.println("[JVDBG] OUT start from topthreadgroup.run");
+System.err.println("[JVDBG] ERR start from topthreadgroup.run");
             Main.start (args);
+System.out.println("[JVDBG] OUT startdone from topthreadgroup.run");
+System.err.println("[JVDBG] ERR startdone from topthreadgroup.run");
         } catch (Throwable t) {
             TopLogging.exit(2, t);
         } finally {

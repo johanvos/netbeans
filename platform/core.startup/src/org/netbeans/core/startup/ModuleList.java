@@ -145,6 +145,7 @@ final class ModuleList implements Stamps.Updater {
         final Set<Module> read = new HashSet<Module>();
         try {
             folder.getFileSystem().runAtomicAction(new ReadInitial(read));
+            System.out.println("[JVDBG] result of readInitial = "+read);
         } catch (IOException ioe) {
             LOG.log(Level.WARNING, null, ioe);
         }
@@ -234,6 +235,7 @@ final class ModuleList implements Stamps.Updater {
         if (triggered) throw new IllegalStateException("Duplicate call to trigger()"); // NOI18N
         Set<Module> maybeEnable = new HashSet<Module>(boot);
         for (DiskStatus status: statuses.values()) {
+            System.out.println("[JVDBG] pendinginstall for "+status+  " = " + status.pendingInstall);
             if (status.pendingInstall) {
                 // We are going to try to turn it on...
                 status.pendingInstall = false;
@@ -1623,6 +1625,7 @@ final class ModuleList implements Stamps.Updater {
             XMLReader reader = null;
             for (int i = 0; i < names.length; i++) {
                 String name = names[i];
+                System.out.println("[JVDBG] modulelist, consider "+name);
                 FileObject f = null;
                 try {
                     // OK, read it from disk.
@@ -1633,9 +1636,11 @@ final class ModuleList implements Stamps.Updater {
                         Dependency.create(Dependency.TYPE_MODULE, name);
                         LOG.log(Level.FINEST, "no cache for {0}", name);
                         f = folder.getFileObject(name.replace('.', '-') + ".xml");
+                        System.out.println("[JVDBG] read info from "+f);
                         InputStream is = f.getInputStream();
                         try {
                             props = readStatus(new BufferedInputStream(is), true);
+                            System.out.println("[JDVBG] props = "+props);
                             if (props == null) {
                                 LOG.warning("Note - failed to parse " + f + " the quick way, falling back on XMLReader");
                                 is.close();
@@ -1701,6 +1706,7 @@ final class ModuleList implements Stamps.Updater {
                     //status.pendingFlush = true;
                     status.setDiskProps(props);
                     statuses.put(name, status);
+                    System.out.println("[JVDBG] put status for "+name + " to " + status+" with pendingInstall = "+enabled+" and file = "+f);
                 } catch (Exception e) {
                     LOG.log(Level.WARNING, "Error encountered while reading " + name, e);
                 }

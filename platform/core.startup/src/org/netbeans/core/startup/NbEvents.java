@@ -102,6 +102,8 @@ final class NbEvents extends Events {
         "# {0} - JAR file name", "TEXT_patch=Module patch or custom extension: {0}"
     })
     @Override protected void logged(final String message, Object[] args) {
+// System.err.println("[JVDBG] logged ERR " + message);
+// System.out.println("[JVDBG] logged OUT " + message);
         if (message.equals(PERF_TICK)) {
             StartLog.logProgress( (String)args[0]);
         } else if (message.equals(PERF_START)) {

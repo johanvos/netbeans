@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.apisupport.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+            <code-name-base>com.gluonhq.netbeans.nbfx.jfx26</code-name-base>
+            <module-dependencies/>
+            <public-packages>
+                <package>javafx.application</package>
+                <package>javafx.beans</package>
+                <package>javafx.beans.binding</package>
+                <package>javafx.beans.property</package>
+                <package>javafx.beans.value</package>
+                <package>javafx.collections</package>
+                <package>javafx.event</package>
+                <package>javafx.scene</package>
+                <package>javafx.scene.control</package>
+                <package>javafx.scene.input</package>
+                <subpackages>javafx</subpackages>
+            </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/javafx-base-linux.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/javafx-base-linux.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/javafx-graphics-linux.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/javafx-graphics-linux.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/javafx-controls-linux.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/javafx-controls-linux.jar</binary-origin>
+            </class-path-extension>
+        </data>
+    </configuration>
+</project>

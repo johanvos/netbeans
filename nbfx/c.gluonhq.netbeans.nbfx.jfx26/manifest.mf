@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: com.gluonhq.netbeans.nbfx.jfx26
+OpenIDE-Module-Specification-Version: 1.0
+OpenIDE-Module-Java-Dependencies: Java > 25
+

@@ -241,7 +241,9 @@ final class MainImpl extends Object {
      * delayed command-line options like -open FILE.
      */
     public static void finishInitialization() {
+System.err.println("[JVDBG] MainImpl.FINISHINIT");
         int r = CLIHandler.finishInitialization (false);
+System.err.println("[JVDBG] non-zero response from CLIHandler.finishInitialization: "+ r);
         if (r != 0) {
             if (r == Integer.MIN_VALUE) {
                 r = 0;

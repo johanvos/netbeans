@@ -19,6 +19,7 @@
 platform
 # application cluster second
 nb
+nbfx
 # ergonomics cluster if present
 ergonomics
 # and now the rest

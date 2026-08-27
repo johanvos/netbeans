@@ -381,6 +381,8 @@ public abstract class CLIHandler extends Object {
     private static int registerFinishInstallation (Execute run) {
         boolean runNow;
     
+System.err.println("[JVDBG] CLI register handler: " + run);
+Thread.dumpStack();
         synchronized (CLIHandler.class) {
             if (doLater != null) {
                 doLater.add (run);
@@ -419,7 +421,9 @@ public abstract class CLIHandler extends Object {
         
         if (toRun != null) {
             for (Execute r : toRun) {
+System.err.println("[JVDBG] CLIHandler, need to run "  + r);
                 int result = r.exec ();
+System.err.println("[JVDBG] CLIHandler, did run "  + r+" and result = " + result);
                 if (result != 0) {
                     return result;
                 }

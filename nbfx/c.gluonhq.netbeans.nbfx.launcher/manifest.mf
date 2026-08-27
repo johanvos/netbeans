@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+OpenIDE-Module: com.gluonhq.netbeans.nbfx.launcher
+OpenIDE-Module-Localizing-Bundle: com/gluonhq/netbeans/nbfx/launcher/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+OpenIDE-Module-Java-Dependencies: Java > 25
+OpenIDE-Module-Eager: true
+OpenIDE-Module-Install: com/gluonhq/netbeans/nbfx/launcher/JavaFXLauncher.class
+

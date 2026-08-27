@@ -257,6 +257,8 @@ final class ModuleListParser {
             }
             SOURCE_SCAN_CACHE.put(root, entries);
         }
+// System.err.println("[JVDBG] RETURN " + entries);
+// Thread.dumpStack();
         return entries;
     }
 

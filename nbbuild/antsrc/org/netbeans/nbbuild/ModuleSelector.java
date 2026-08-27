@@ -158,6 +158,7 @@ public final class ModuleSelector extends BaseExtendSelector {
 
     @Override
     public void verifySettings() {
+System.err.println("[JVDBG] VERIFYSETTINGS");
         if (includeClusters != null) {
             return;
         }

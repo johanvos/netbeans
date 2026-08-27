@@ -644,6 +644,8 @@ final class NbInstaller extends ModuleInstaller {
      * @param modules the modules which are now being turned on
      */
     private void checkForDeprecations(List<Module> modules) {
+System.err.println("[JVDBG] ERR check for deprecations in " + modules);
+Thread.dumpStack();
         Map<String,Set<String>> depToUsers = new TreeMap<String,Set<String>>();
         for (Module m : modules) {
             String depr = cache.findProperty(m, "OpenIDE-Module-Deprecated", false); // NOI18N
@@ -671,6 +673,7 @@ final class NbInstaller extends ModuleInstaller {
                 // XXX use NbEvents? I18N?
                 // For now, assume this is a developer-oriented message that need not be localized or displayed in a pretty fashion.
                 Set<String> users = entry.getValue();
+System.err.println("[JVDBG] ERR show warning on " + dep);
                 if (message != null) {
                     Util.err.log(Level.WARNING, "the modules {0} use {1} which is deprecated: {2}", new Object[] {users, dep, message});
                 } else {

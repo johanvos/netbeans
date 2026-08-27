@@ -1107,7 +1107,8 @@ public final class ParseProjectXml extends Task {
                 }
                 clusterF = clusterF.getParentFile();
             }
-            String msg = "The module " + cnb + " cannot be " + (runtime ? "run" : "compiled") +
+System.err.println("[JVDBG] jar = " + jar);
+            String msg = "OEIThe module " + cnb + " cannot be " + (runtime ? "run" : "compiled") +
                     " against because it is part of the cluster " +
                     jar.getParentFile().getParentFile() + " which is not part of cluster.path in your suite configuration.\n\n" +
                     "Cluster.path is: " + clusterPath;

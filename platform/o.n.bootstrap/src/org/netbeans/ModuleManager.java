@@ -1295,7 +1295,8 @@ public final class ModuleManager extends Modules {
     
     private void enable(Set<Module> modules, boolean honorAutoloadEager) throws IllegalArgumentException, InvalidException {
         assertWritable();
-        Util.err.log(Level.FINE, "enable: {0}", modules);
+        Util.err.log(Level.INFO, "enable: {0}", modules);
+        Thread.dumpStack();
         /* Consider eager modules: 
         if (modules.isEmpty()) {
             return;
@@ -1347,6 +1348,7 @@ public final class ModuleManager extends Modules {
     }
     
     private void doEnable(List<Module> toEnable) throws IllegalArgumentException, InvalidException {
+        System.out.println("[JVDBG] listtoenable = "+toEnable);
         for (;;) {
             // Actually turn on the listed modules.
             // List of modules that need to be "rolled back".
@@ -1360,12 +1362,13 @@ public final class ModuleManager extends Modules {
             try {
                 ev.log(Events.PERF_START, "module preparation" ); // NOI18N
                 for (Module m: toEnable) {
+                    System.out.println("[JVDBG] consider "+m+", isenabled = "+m.isEnabled()+" and name  = "+m.getCodeName());
                     if (m.isEnabled()) {
                         continue;
                     }
                     fallback.addFirst(m);
-                    if (Util.err.isLoggable(Level.FINE)) {
-                        Util.err.fine("enable: bringing up: " + m);
+                    if (Util.err.isLoggable(Level.INFO)) {
+                        Util.err.info("enable: bringing up: " + m);
                     }
                     ev.log(Events.PERF_START, "bringing up classloader on " + m.getCodeNameBase()); // NOI18N
                     try {
@@ -1537,7 +1540,7 @@ public final class ModuleManager extends Modules {
      */
     public void disable(Set<Module> modules) throws IllegalArgumentException {
         assertWritable();
-        Util.err.fine("disable: " + modules);
+        Util.err.info("disable: " + modules);
         if (modules.isEmpty()) {
             return;
         }

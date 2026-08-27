@@ -160,6 +160,7 @@ public final class Main extends Object {
             StartLog.logStart ("Modules initialization"); // NOI18N
             try {
                 moduleSystem = new ModuleSystem();
+System.err.println("[JDVBG] moduleSystem, init with configroot = " + FileUtil.getConfigRoot().getPath());
                 moduleSystem.init(FileUtil.getConfigRoot().getFileSystem());
                 SystemFileSystem.registerMutex(moduleSystem.getManager().mutex());
             } catch (IOException ioe) {
@@ -244,6 +245,8 @@ public final class Main extends Object {
     //graphics environment fails eg. due to incorrect value of $DISPLAY
     //on X Windows (Linux, Solaris). In such case IDE will not start
     //so we must inform user about error.
+System.err.println("[JVDBG] ERR startup.main , init gui");
+System.out.println("[JVDBG] OUT startup.main , init gui");
       
     if (CLIOptions.isGui ()) {
         try {
@@ -300,6 +303,7 @@ public final class Main extends Object {
     
     // -----------------------------------------------------------------------------------------------------
     // 9. Modules
+System.err.println("[JVDBG] ERR startup.main , modules.1");
     
     assert Repository.getDefault() instanceof NbRepository : "Has to be NbRepository: " + Repository.getDefault(); // NOI18N
     getModuleSystem ();

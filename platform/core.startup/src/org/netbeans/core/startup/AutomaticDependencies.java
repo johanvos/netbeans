@@ -222,6 +222,7 @@ public final class AutomaticDependencies {
          * @since org.netbeans.core.startup 1.21
          */
         public @Override String toString() {
+            Thread.dumpStack();
             return "had to upgrade dependencies for module " + cnb + ": added = " + getAdded() +
                     " removed = " + getRemoved() + "; details: " + getMessages(); // NOI18N
         }

@@ -60,6 +60,7 @@ public class ModulesLog extends AbstractLogFile {
         String s;
         try {
             s=getFullText();
+System.err.println("[JVDBG] PARSE " + s);
         } catch (java.io.IOException ioe) {
             throw new ParseException ("Exception getting logfile to parse " + getFileName(), ioe);
         }

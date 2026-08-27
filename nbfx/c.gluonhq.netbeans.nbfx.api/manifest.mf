@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: com.gluonhq.netbeans.nbfx.api
+OpenIDE-Module-Install: com/gluonhq/netbeans/nbfx/api/Installer.class
+OpenIDE-Module-Localizing-Bundle: com/gluonhq/netbeans/nbfx/api/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+OpenIDE-Module-Java-Dependencies: Java > 25
+
