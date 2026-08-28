@@ -1,0 +1,283 @@
+
+.nbfx-tab-pane {
+    -fx-tab-min-height: 28;
+    -fx-tab-max-height: 28;
+    /* REQUIRED, not cosmetic, to prevent tabs with empty text after dnd/restore */
+    -fx-open-tab-animation: none;
+    -fx-close-tab-animation: none;
+}
+
+.nbfx-tab-pane > .tab-header-area {
+    -fx-min-height: 28;
+    -fx-pref-height: 28;
+    -fx-max-height: 28;
+    -fx-padding: 0em 0.416667em 0.0em 0.416667em;
+    -fx-background-color: #C2C2C2, #BCC7D1;
+    -fx-background-insets: 0, 0 0 2 0;
+}
+
+.nbfx-tab-pane > .tab-header-area > .tab-header-background,
+.nbfx-tab-pane:top > .tab-header-area > .tab-header-background {
+    -fx-min-height: 28;
+    -fx-pref-height: 28;
+    -fx-max-height: 28;
+    -fx-background-color: #C2C2C2, #D3D3D3;
+    -fx-background-insets: 0, 0 0 2 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+}
+.nbfx-tab-pane:focused > .tab-header-area > .tab-header-background,
+.nbfx-tab-pane:focus-in-tabpane > .tab-header-area > .tab-header-background,
+.nbfx-tab-pane:top:focused > .tab-header-area > .tab-header-background,
+.nbfx-tab-pane:top:focus-in-tabpane > .tab-header-area > .tab-header-background {
+    -fx-background-color: #C2C2C2, #BCC7D1;
+}
+
+.nbfx-tab-pane > .tab-header-area > .control-buttons-tab > .container {
+    -fx-padding: 4 0 0 0;
+    -fx-min-width: 16;
+    -fx-min-height: 16;
+    -fx-pref-width: 16;
+    -fx-pref-height: 16;
+    -fx-max-width: 16;
+    -fx-max-height: 16;
+    -fx-background-color: transparent;
+}
+.nbfx-tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button {
+    -fx-padding: 0;
+    -fx-min-width: 16;
+    -fx-min-height: 16;
+    -fx-pref-width: 16;
+    -fx-pref-height: 16;
+    -fx-max-width: 16;
+    -fx-max-height: 16;
+    -fx-background-radius: 4;
+    -fx-background-color: transparent;
+    -fx-background-insets: 2 0 6 0;
+}
+.nbfx-tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button:hover {
+    -fx-background-color: #E0E0E0;
+}
+
+.nbfx-tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button > .arrow {
+    -fx-shape: "M 3.646 6.354 L 7.646 10.354 L 8 10.708 L 8.354 10.354 L 12.354 6.354 L 11.647 5.647 L 8.001 9.293 L 4.355 5.647 Z";
+    -fx-background-color: #666666;
+    -fx-scale-shape: false;
+    -fx-background-insets: -1 0 0 0;
+    -fx-padding: 0;
+}
+
+.nbfx-tab-pane > .tab-header-area > .headers-region > .tab,
+.nbfx-tab-pane > .tab-header-area > .headers-region > .tab:top {
+    -fx-min-height: 28;
+    -fx-pref-height: 28;
+    -fx-max-height: 28;
+    -fx-background-radius: 0;
+    -fx-padding: 3 6.5 0 6.5;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+    -fx-background-color: #C2C2C2, #BCC7D1;
+    -fx-background-insets: 0, 0 0 2 0;
+}
+.nbfx-tab-pane > .tab-header-area > .headers-region > .tab:top:hover {
+    -fx-background-color: #C2C2C2, #D1D9E0;
+    -fx-background-insets: 0, 0 0 2 0;
+    -fx-border-style: solid;
+}
+.nbfx-tab-pane > .tab-header-area > .headers-region > .tab:top:selected {
+    -fx-background-color: #3C83C5, #C2C2C2, #F2F2F2;
+    -fx-background-insets: 0, 3 0 1 0, 3 1 0 1;
+    -fx-border-color: transparent transparent #F2F2F2 transparent;
+    -fx-border-style: solid;
+}
+.nbfx-tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: black;
+    -fx-padding: 0 2 0 0;
+}
+.nbfx-tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-close-button {
+    -fx-background-color: #666666;
+    -fx-shape: "M 11.816 3.684 C 12.128 3.997 12.128 4.503 11.816 4.816 L 9.132 7.5 L 11.816 10.184 C 12.128 10.497 12.128 11.003 11.816 11.316 C 11.503 11.628 10.997 11.628 10.684 11.316 L 8 8.632 L 5.316 11.316 C 5.003 11.628 4.497 11.628 4.184 11.316 C 3.872 11.003 3.872 10.497 4.184 10.184 L 6.868 7.5 L 4.184 4.816 C 3.872 4.503 3.872 3.997 4.184 3.684 C 4.497 3.372 5.003 3.372 5.316 3.684 L 8 6.368 L 10.684 3.684 C 10.997 3.372 11.503 3.372 11.816 3.684 Z";
+    -fx-scale-shape: false;
+    -fx-effect: null;
+}
+.nbfx-tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-close-button:hover {
+    -fx-background-color: #c74f50;
+    -fx-shape: "M 2 0 L 14 0 C 15.105 0 16 0.895 16 2 L 16 13 C 16 14.105 15.105 15 14 15 L 2 15 C 0.895 15 0 14.105 0 13 L 0 2 C 0 0.895 0.895 0 2 0 Z M 10.684 3.684 L 8 6.368 L 5.316 3.684 C 5.003 3.372 4.497 3.372 4.184 3.684 C 3.872 3.997 3.872 4.503 4.184 4.816 L 6.868 7.5 L 4.184 10.184 C 3.872 10.497 3.872 11.003 4.184 11.316 C 4.497 11.628 5.003 11.628 5.316 11.316 L 8 8.632 L 10.684 11.316 C 10.997 11.628 11.503 11.628 11.816 11.316 C 12.128 11.003 12.128 10.497 11.816 10.184 L 9.132 7.5 L 11.816 4.816 C 12.128 4.503 12.128 3.997 11.816 3.684 C 11.503 3.372 10.997 3.372 10.684 3.684 Z";
+}
+
+.nbfx-tab-pane:focused > .tab-header-area > .headers-region > .tab:selected > .tab-container > .focus-indicator {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-border-radius: 0;
+}
+
+.nbfx-tab-pane > .tab-content-area {
+    -fx-border-width: 0;
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+}
+
+.nbfx-tab-pane:drop-target > .tab-header-area > .tab-header-background,
+.nbfx-tab-pane:drop-target > .tab-header-area > .headers-region > .tab {
+    -fx-border-color: #BCC7D1 #BCC7D1 red #BCC7D1;
+    -fx-border-insets: 0;
+    -fx-border-style: segments(10, 6);
+}
+.nbfx-tab-pane:drop-target:has-placeholder > .tab-header-area > .headers-region > .tab:top:selected {
+    -fx-border-color: transparent transparent red transparent;
+    -fx-border-insets: 0;
+    -fx-border-style: segments(10, 6);
+}
+.nbfx-tab-pane:drop-target > .tab-header-area > .headers-region > .tab.nbfx-placeholder-tab {
+    -fx-border-color: red, #BCC7D1;
+    -fx-border-insets: 0, 2 2 0 2;
+    -fx-border-style: segments(10, 6), solid;
+}
+.nbfx-tab-pane:drop-target > .tab-header-area > .headers-region > .tab.nbfx-placeholder-tab > .tab-container {
+    -fx-opacity: 0.5;
+}
+
+.nbfx-tab-pane:drop-target > .tab-content-area {
+    -fx-border-color: red, white;
+    -fx-border-insets: 0, 0 2 2 2;
+    -fx-border-style: segments(10, 6), solid;
+}
+
+/* Toolbar */
+
+.tool-bar {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+}
+
+.tool-bar.toolbar-drag-placeholder {
+    -fx-opacity: 0.7;
+}
+
+.tool-bar > .container > .button.toolbar-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+    -fx-padding: 3;
+    -fx-content-display: graphic-only;
+}
+.tool-bar > .container > .button.toolbar-button:hover {
+    -fx-background-color: #E0E0E0;
+}
+.tool-bar > .container > .button.toolbar-button:armed {
+    -fx-background-color: #D0D0D0;
+}
+
+.tool-bar > .container > .button.toolbar-drag-handle {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+    -fx-padding: 0 2 0 0;
+}
+
+.toolbar-drop-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: red;
+    -fx-border-width: 2;
+    -fx-border-style: segments(4, 3);
+    -fx-border-insets: 0;
+}
+
+/* Bottom status bar */
+.status-bar {
+    -fx-min-height: 26;
+    -fx-pref-height: 26;
+    -fx-padding: 2 8 2 8;
+    -fx-background-color: #F2F2F2;
+    -fx-border-color: #CFCFCF transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-bar-progress-group {
+    -fx-spacing: 8;
+    -fx-alignment: center;
+}
+
+.status-bar-project {
+    -fx-text-fill: #444444;
+    -fx-font-weight: bold;
+}
+
+.status-bar-legend {
+    -fx-text-fill: #444444;
+}
+
+.status-bar-progress {
+    -fx-pref-width: 180;
+}
+
+.status-bar-cancel {
+    -fx-background-color: transparent;
+    -fx-background-radius: 3;
+    -fx-padding: 0 5 1 5;
+    -fx-text-fill: #666666;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+.status-bar-cancel:hover {
+    -fx-background-color: #E0A0A0;
+    -fx-text-fill: white;
+}
+.status-bar-cancel:armed {
+    -fx-background-color: #C88080;
+}
+
+/** Context Menu **/
+.context-menu {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-min-width: 160;
+    -fx-padding: 4 1 4 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 12, 0.10, 0, 8);
+}
+
+.context-menu .menu {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-effect: null;
+}
+
+.context-menu .menu:hover .arrow,
+.context-menu .menu:focused .arrow {
+    -fx-background-color: #808080;
+}
+
+.context-menu .menu-item,
+.context-menu .menu {
+    -fx-padding: 4 8 4 8;
+}
+
+.context-menu .menu-item:hover,
+.context-menu .menu-item:focused {
+    -fx-background-color: #2775BF;
+}
+
+.context-menu .menu-item > .label {
+    -fx-text-fill: black;
+}
+
+.context-menu .menu-item:hover > .label,
+.context-menu .menu-item:focused > .label {
+    -fx-text-fill: white;
+}
+
+.context-menu .separator {
+    -fx-padding: 4 0 4 0;
+}
+
+.context-menu .menu-item > .graphic-container > .label > .image-view {
+    -fx-fit-width: 16;
+    -fx-fit-height: 16;
+}

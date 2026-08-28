@@ -49,6 +49,7 @@
             </module-dependencies>
             <public-packages>
                 <package>com.gluonhq.netbeans.nbfx.api</package>
+                <package>com.gluonhq.netbeans.nbfx.api.completion</package>
             </public-packages>
         </data>
     </configuration>

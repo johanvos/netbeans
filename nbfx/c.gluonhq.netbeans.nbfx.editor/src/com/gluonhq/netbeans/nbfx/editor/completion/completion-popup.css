@@ -1,0 +1,132 @@
+.completion-popup-root {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 6;
+    -fx-border-color: #C8CDD5;
+    -fx-border-radius: 6;
+    -fx-border-width: 1;
+    -fx-padding: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.16), 14, 0.2, 0, 3);
+}
+
+.completion-popup-root > .completion-popup-list {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.completion-popup-root > .completion-popup-list > .placeholder > .completion-popup-placeholder {
+    -fx-background-color: #DCEBFA;
+    -fx-text-fill: #0B57D0;
+    -fx-font-size: 12px;
+    -fx-padding: 6 8 6 8;
+    -fx-alignment: center;
+    -fx-max-width: 1000;
+}
+
+.completion-popup-root > .completion-popup-footer {
+    -fx-text-fill: #6B7280;
+    -fx-fill: #6B7280;
+    -fx-font-size: 11px;
+    -fx-padding: 4 8 6 8;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .scroll-bar:vertical,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .scroll-bar:horizontal,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .corner {
+    -fx-background-color: transparent;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .scroll-bar:vertical > .increment-button,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .scroll-bar:vertical > .decrement-button,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .scroll-bar:vertical > .increment-button > .increment-arrow,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .scroll-bar:vertical > .decrement-button > .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 2 0 2;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .scroll-bar:vertical > .thumb {
+    -fx-background-color: #6B7280;
+    -fx-background-insets: 3 2 3 2;
+    -fx-background-radius: 16;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-text-fill: #1F2328;
+    -fx-min-height: 24;
+    -fx-pref-height: 24;
+    -fx-max-height: 24;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled {
+    -fx-background-color: transparent;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
+    -fx-background-color: #F3F7FB;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:focused:selected {
+    -fx-background-color: #DCEBFA;
+    -fx-text-fill: #0B57D0;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected > .completion-popup-row > .completion-popup-text,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:focused:selected > .completion-popup-row > .completion-popup-text,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected > .completion-popup-row > .completion-popup-detail,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:focused:selected > .completion-popup-row > .completion-popup-detail {
+    -fx-fill: #0B57D0;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell:separator {
+    -fx-min-height: 3;
+    -fx-pref-height: 3;
+    -fx-max-height: 3;
+}
+
+.completion-popup-row,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell > .completion-popup-row {
+    -fx-alignment: center-left;
+    -fx-padding: 0 10 0 10;
+    -fx-min-height: 24;
+    -fx-pref-height: 24;
+}
+
+.completion-popup-row > .completion-popup-text,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell > .completion-popup-row > .completion-popup-text {
+    -fx-font-family: "Monospaced";
+    -fx-font-size: 13px;
+    -fx-fill: #1F2328;
+}
+
+.completion-popup-row > .completion-popup-text:emphasized,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell > .completion-popup-row > .completion-popup-text:emphasized {
+    -fx-font-weight: bold;
+}
+
+.completion-popup-row > .completion-popup-detail,
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell > .completion-popup-row > .completion-popup-detail {
+    -fx-font-family: "Monospaced";
+    -fx-font-size: 11px;
+    -fx-fill: #6B7280;
+}
+
+.completion-popup-root > .completion-popup-list > .virtual-flow > .clipped-container > .sheet > .list-cell > .completion-popup-separator {
+    -fx-min-height: 1;
+    -fx-pref-height: 1;
+    -fx-max-height: 1;
+    -fx-max-width: 1000;
+    -fx-background-color: #D7DCE3;
+    -fx-background-insets: 0 12 0 12;
+}
+

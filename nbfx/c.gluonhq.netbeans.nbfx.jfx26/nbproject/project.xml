@@ -17,6 +17,8 @@
                 <package>javafx.scene.control</package>
                 <package>javafx.scene.input</package>
                 <subpackages>javafx</subpackages>
+                <subpackages>jfx.incubator</subpackages>
+                <subpackages>com.sun</subpackages>
             </public-packages>
             <class-path-extension>
                 <runtime-relative-path>ext/javafx-base-linux.jar</runtime-relative-path>
@@ -29,6 +31,14 @@
             <class-path-extension>
                 <runtime-relative-path>ext/javafx-controls-linux.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/javafx-controls-linux.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jfx.incubator.input.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jfx.incubator.input.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jfx.incubator.richtext.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jfx.incubator.richtext.jar</binary-origin>
             </class-path-extension>
         </data>
     </configuration>

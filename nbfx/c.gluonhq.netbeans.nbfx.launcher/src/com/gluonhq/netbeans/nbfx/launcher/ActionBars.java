@@ -248,6 +248,8 @@ final class ActionBars {
      * window regardless of which window has focus. Save All and project actions stay global.
      */
     MenuBar createMenuBar(ObservableValue<EditorDocument> mainScope) {
+        try {
+            LOG.info("[NBFX] Start creating menubar");
         Menu fileMenu = new Menu(message("Menu.file"));
         recentMenu = new Menu(message("Menu.openRecent"));
         refreshRecentProjects();
@@ -270,6 +272,10 @@ final class ActionBars {
         // TODO: Fix https://bugs.openjdk.org/browse/JDK-8388508
         menuBar.setUseSystemMenuBar(true);
         return menuBar;
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+        return null;
     }
 
     /**
@@ -609,6 +615,7 @@ final class ActionBars {
 
     private MenuItem createMenuItem(String commandId, ObservableValue<EditorDocument> scope,
             ObservableValue<Boolean> preferFile) {
+        LOG.info("Create menuItem for "+commandId);
         Command command = resolve(commandId, scope, preferFile);
         if (command == null) {
             return null;
@@ -705,6 +712,7 @@ final class ActionBars {
      */
     private Command resolve(String commandId, ObservableValue<EditorDocument> scope,
             ObservableValue<Boolean> preferFile) {
+        LOG.info("Need to resolve "+commandId+ " and registry = "+registry);
         if (registry == null) {
             return null;
         }
@@ -712,6 +720,7 @@ final class ActionBars {
                 .map(this::trackScoped)
                 .or(() -> registry.find(commandId))
                 .orElse(null);
+        LOG.info("Editor = "+editor+" and preferFile = "+preferFile+" and fa = " + fileActions);
         if (preferFile != null && fileActions != null) {
             Command file = fileCommandFor(commandId);
             if (file != null && editor != null) {

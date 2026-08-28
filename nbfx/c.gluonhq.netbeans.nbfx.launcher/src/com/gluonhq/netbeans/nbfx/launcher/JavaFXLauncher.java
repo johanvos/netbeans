@@ -26,11 +26,19 @@ public class JavaFXLauncher extends ModuleInstall {
     public void restored() {
         System.out.println("JAVAFXLAUNCHER 0");
         System.err.println("JAVAFXLAUNCHER 0-err");
-        LOG.info("NetBeans main window, AWT listener added");
+        LOG.info("Starting API launcher, register awtEventListener");
         Toolkit.getDefaultToolkit().addAWTEventListener(windowSuppressor, AWTEvent.COMPONENT_EVENT_MASK);
 
         LOG.info("NetBeans Platform loaded, launching JavaFX...");
-        Thread thread = new Thread(() -> Application.launch(JavaFXLaunchApp.class), "nbfx-javafx-launcher");
+        Thread thread = new Thread(() -> {
+            try {
+            LOG.info("Launch jla");
+            Application.launch(JavaFXLaunchApp.class);
+            } catch (Throwable t) {
+                LOG.info("Could not launch javafx framework due to "+ t);
+                t.printStackTrace();
+            }
+        }, "nbfx-javafx-launcher");
         thread.setDaemon(true);
         thread.start();
     }

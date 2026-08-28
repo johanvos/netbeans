@@ -615,6 +615,9 @@
                 </test-type>
             </test-dependencies>
             <friend-packages>
+                <!-- johan vos -->
+                <friend>com.gluonhq.netbeans.nbfx.navigator</friend>
+                <friend>com.gluonhq.netbeans.nbfx.navigator.utils</friend>
                 <!-- sven reimers -->
                 <friend>org.nbheaven.sqe.core.maven</friend>
                 <friend>org.nbheaven.sqe.core.maven3</friend>
