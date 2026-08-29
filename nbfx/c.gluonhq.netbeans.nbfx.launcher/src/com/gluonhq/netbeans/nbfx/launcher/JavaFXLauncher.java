@@ -33,6 +33,8 @@ public class JavaFXLauncher extends ModuleInstall {
         Thread thread = new Thread(() -> {
             try {
             LOG.info("Launch jla");
+System.setProperty("javafx.debug","true");
+System.setProperty("prism.verbose","true");
             Application.launch(JavaFXLaunchApp.class);
             } catch (Throwable t) {
                 LOG.info("Could not launch javafx framework due to "+ t);
