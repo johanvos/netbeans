@@ -21,16 +21,16 @@
                 <subpackages>com.sun</subpackages>
             </public-packages>
             <class-path-extension>
-                <runtime-relative-path>ext/javafx-base-linux.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/javafx-base-linux.jar</binary-origin>
+                <runtime-relative-path>ext/javafx.base.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/javafx.base.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/javafx-graphics-linux.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/javafx-graphics-linux.jar</binary-origin>
+                <runtime-relative-path>ext/javafx.graphics.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/javafx.graphics.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/javafx-controls-linux.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/javafx-controls-linux.jar</binary-origin>
+                <runtime-relative-path>ext/javafx.controls.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/javafx.controls.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/jfx.incubator.input.jar</runtime-relative-path>
