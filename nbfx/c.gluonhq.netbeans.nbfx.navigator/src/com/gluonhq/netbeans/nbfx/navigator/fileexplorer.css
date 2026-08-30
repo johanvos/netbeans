@@ -1,0 +1,193 @@
+.file-explorer {
+
+}
+
+.tree-cell,
+.tree-cell:hover,
+.tree-cell:focused {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+/** tree-view non focused **/
+.tree-cell:filled:selected {
+    -fx-background: #D3D3D3;
+    -fx-background-color: #D3D3D3;
+    -fx-text-fill: black;
+}
+
+.tree-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-cell:selected:filled,
+.tree-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-cell:focused {
+    -fx-background: #2775BF;
+    -fx-background-color: #2775BF;
+    -fx-text-fill: white;
+}
+
+.tree-cell.project-root-selected {
+    -fx-font-weight: bold;
+}
+
+.context-menu,
+.tooltip {
+    -fx-font-weight: normal;
+}
+
+/** Drag-and-drop drop indicators. **/
+.tree-cell:drop-into {
+    -fx-border-color: #2775BF;
+    -fx-background-color: #2775BF50;
+    -fx-border-width: 1.5;
+    -fx-border-insets: 0;
+}
+.tree-cell:drop-above {
+    -fx-border-color: #2775BF transparent transparent transparent;
+    -fx-border-width: 2 0 0 0;
+    -fx-border-insets: 0;
+}
+.tree-cell:drop-below {
+    -fx-border-color: transparent transparent #2775BF transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-insets: 0;
+}
+
+.tree-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: lightgray;
+    -fx-shape: "M4.974 3.174C5.208 2.94 5.592 2.94 5.826 3.174L9.426 6.774C9.66 7.008 9.66 7.392 9.426 7.626L5.826 11.226C5.592 11.46 5.208 11.46 4.974 11.226 4.74 10.992 4.74 10.608 4.974 10.374L8.154 7.2 4.974 4.026C4.74 3.792 4.74 3.408 4.974 3.174Z";
+}
+
+.tree-view > .virtual-flow > .scroll-bar:vertical,
+.tree-view > .virtual-flow > .scroll-bar:horizontal {
+    -fx-padding: 0;
+}
+
+.tree-view > .virtual-flow > .corner,
+.tree-view > .virtual-flow > .scroll-bar:horizontal,
+.tree-view > .virtual-flow > .scroll-bar:horizontal:focused,
+.tree-view > .virtual-flow > .scroll-bar:vertical,
+.tree-view > .virtual-flow > .scroll-bar:vertical:focused {
+    -fx-background-color: #F5F5F5;
+}
+
+.tree-view > .virtual-flow > .scroll-bar:vertical > .track,
+.tree-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.tree-view > .virtual-flow > .corner {
+    -fx-background-insets: 0;
+}
+
+.tree-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.tree-view > .virtual-flow > .scroll-bar:vertical > .track {
+    -fx-background-color: #F5F5F5;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.tree-view > .virtual-flow > .scroll-bar:horizontal:focused > .track,
+.tree-view > .virtual-flow > .scroll-bar:vertical:focused > .track {
+    -fx-background-color: #EDEDED;
+}
+
+.tree-view > .virtual-flow > .scroll-bar:horizontal > .increment-button,
+.tree-view > .virtual-flow > .scroll-bar:horizontal > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 5 0 5 0;
+}
+
+.tree-view > .virtual-flow > .scroll-bar:vertical > .increment-button,
+.tree-view > .virtual-flow > .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 5 0 5;
+}
+
+.tree-view > .virtual-flow > .scroll-bar > .increment-button > .increment-arrow,
+.tree-view > .virtual-flow > .scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+.tree-view > .virtual-flow > .scroll-bar:horizontal > .thumb,
+.tree-view > .virtual-flow > .scroll-bar:vertical > .thumb {
+    -fx-background-color: transparent, #CFCFCF;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 20;
+}
+
+.tree-view > .virtual-flow > .scroll-bar:horizontal:hover > .thumb,
+.tree-view > .virtual-flow > .scroll-bar:vertical:hover > .thumb {
+    -fx-background-color: transparent, #B6B6B6;
+}
+
+.tree-view > .virtual-flow > .scroll-bar:horizontal:pressed > .thumb,
+.tree-view > .virtual-flow > .scroll-bar:vertical:pressed > .thumb {
+    -fx-background-color: transparent, #9C9C9C;
+}
+
+.icon-region {
+    -fx-pref-width: 20;
+    -fx-pref-height: 15;
+    -fx-background-color: transparent;
+}
+
+.icon-region > .icon {
+    -fx-scale-shape: false;
+    -fx-background-color: black;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.icon-region > .icon.folder {
+    -fx-shape: "M0 1.2H1.8C1.47 1.2 1.2 1.47 1.2 1.8V10.2C1.2 10.53 1.47 10.8 1.8 10.8H11.4C11.73 10.8 12 10.53 12 10.2V3.6C12 3.27 11.73 3 11.4 3H6.558L5.358 1.2ZM1.8 0H5.676C5.88 0 6.066.102 6.18.27L7.2 1.8H11.4C12.396 1.8 13.2 2.604 13.2 3.6V10.2C13.2 11.196 12.396 12 11.4 12H1.8C.804 12 0 11.196 0 10.2V1.8C0 .804.804 0 1.8 0Z";
+}
+
+.icon-region:expanded > .icon.folder {
+    -fx-shape: "M0 4.2H13.002C13.662 4.2 14.202 4.74 14.202 5.4 14.202 5.556 14.172 5.718 14.106 5.862L12.108 10.662C11.922 11.106 11.484 11.4 10.998 11.4H2.622C1.698 11.4.93 10.704.834 9.786L.012 1.986C-.096 1.002.624.114 1.614.012 1.674.006 1.74 0 1.8 0H5.37C5.628 0 5.856.168 5.94.408L6.402 1.8H11.64C12.306 1.8 12.84 2.34 12.84 3 12.84 3.048 12.84 3.102 12.834 3.15L12.702 4.2ZM11.49 4.2 11.64 3H5.538L4.938 1.2H1.8C1.782 1.2 1.758 1.2 1.74 1.206 1.41 1.236 1.17 1.536 1.206 1.86L1.962 9.09 3.696 4.938C3.882 4.494 4.314 4.2 4.8 4.2H11.49ZM4.8 5.4 2.802 10.2H10.998L13.002 5.4H4.8Z";
+}
+
+.icon-region > .icon.file {
+    -fx-shape: "M0 2.4C1.848 2.4 1.65 2.37 1.53 2.466 1.38 2.526 1.326 2.58 1.266 2.73 1.17 2.85 1.2 3.048 1.2 3.72L1.2 10.68C1.2 11.352 1.17 11.55 1.266 11.67 1.326 11.82 1.38 11.874 1.53 11.934 1.65 12.03 1.848 12 2.52 12L7.08 12C7.752 12 7.95 12.03 8.07 11.934 8.22 11.874 8.274 11.82 8.334 11.67 8.43 11.55 8.4 11.352 8.4 10.68L8.4 6 7.32 6C6.648 6 6.174 5.97 5.784 5.802 5.478 5.634 5.166 5.316 4.998 5.016 4.83 4.626 4.8 4.152 4.8 3.48L4.8 2.4ZM8.016 4.662 6.138 2.784C6.084 2.73 6.036 2.682 6 2.646L6 3.48C6 4.152 5.97 4.35 6.066 4.47 6.126 4.62 6.18 4.674 6.33 4.734 6.45 4.83 6.648 4.8 7.32 4.8L8.154 4.8C8.118 4.764 8.07 4.722 8.016 4.662ZM9.6 5.598 9.6 10.68C9.6 11.352 9.57 11.826 9.402 12.216 9.234 12.516 8.916 12.834 8.616 13.002 8.226 13.17 7.752 13.2 7.08 13.2L2.52 13.2C1.848 13.2 1.374 13.17.984 13.002.684 12.834.366 12.516.198 12.216.036 11.826 0 11.352 0 10.68L0 3.72C0 3.048.036 2.574.198 2.184.366 1.878.684 1.566.984 1.398 1.374 1.23 1.848 1.2 2.52 1.2L5.208 1.2C5.274 1.2 5.394 1.2 5.4 1.2 5.4 1.2 5.4 1.2 5.406 1.2 5.406 1.2 5.406 1.2 5.406 1.2 5.592 1.2 5.766 1.218 5.922 1.248 6.09 1.296 6.294 1.38 6.444 1.464 6.618 1.584 6.78 1.728 6.984 1.938L8.862 3.816C9.072 4.02 9.216 4.182 9.336 4.356 9.42 4.506 9.504 4.71 9.552 4.878 9.582 5.022 9.582 5.226 9.582 5.256 9.594 5.304 9.6 5.352 9.6 5.4 9.6 5.406 9.6 5.418 9.6 5.424 9.6 5.478 9.6 5.532 9.6 5.598Z";
+    -fx-background-color: gray;
+}
+
+.icon-region > .error-region {
+    -fx-pref-width: 8;
+    -fx-max-width: 8;
+    -fx-pref-height: 8;
+    -fx-max-height: 8;
+    -fx-background-color: transparent;
+    visibility: hidden;
+    -fx-managed: false;
+}
+.icon-region:error > .error-region {
+    visibility: visible;
+    -fx-managed: true;
+}
+
+.icon-region > .error-region > .icon {
+    -fx-scale-shape: false;
+    -fx-shape: "M7.2 2.4A4.8 4.8 90 1012 7.2 4.8 4.8 90 007.2 2.4ZM6.6 4.8A.6.6 90 017.8 4.8V7.56A.6.6 90 116.6 7.56ZM7.2 10.2A.69.69 90 117.89 9.51.69.69 90 017.2 10.2Z";
+    -fx-background-color: red;
+}
+
+.icon-region > .changes-region {
+    -fx-pref-width: 8;
+    -fx-max-width: 8;
+    -fx-pref-height: 8;
+    -fx-max-height: 8;
+    -fx-translate-x: 4;
+    -fx-background-color: transparent;
+    visibility: hidden;
+    -fx-managed: false;
+}
+.icon-region:changes > .changes-region {
+    visibility: visible;
+    -fx-managed: true;
+}
+
+.icon-region > .changes-region > .icon {
+    -fx-scale-shape: false;
+    -fx-shape: "M2.34 1.02C1.59.91.93.68.49.36.32.24.11.01.05-.12L0-.23 0-3.48 0-6.73.05-6.83C.26-7.27.99-7.64 1.97-7.81 2.44-7.89 2.62-7.91 3.21-7.91 3.79-7.91 4-7.89 4.45-7.8 5.43-7.61 6.15-7.22 6.35-6.79L6.4-6.68 6.4-3.41 6.4-.14 6.35-.03C6.13.47 5.23.88 4.06 1.02 3.77 1.06 2.59 1.06 2.33 1.02ZM3.93-6.01C4.6-6.08 5.13-6.25 5.34-6.46 5.43-6.55 5.46-6.61 5.46-6.71 5.46-7.01 4.88-7.27 3.97-7.39 3.67-7.43 2.79-7.43 2.5-7.4 1.7-7.31 1.14-7.11.97-6.86.92-6.78.91-6.67.95-6.59 1.07-6.35 1.6-6.13 2.32-6.03 2.81-5.96 3.44-5.96 3.94-6.01Z";
+    -fx-background-color: blue;
+}

@@ -1,0 +1,144 @@
+.code-editor {
+    -code-keyword-color: #336BDD;
+    -code-keyword-directive-color: blue;
+    -code-string-color: #1E9347;
+    -code-comment-color: #969696;
+    -code-field-color: #CE54B8;
+    -code-method-color: black;
+    -code-class-color: black;
+    -fx-padding: 0;
+}
+
+.brace {
+    -fx-fill: #CCFFCC;
+    -fx-stroke-width: 0;
+}
+.brace-error {
+    -fx-fill: #D83636;
+    -fx-stroke-width: 0;
+}
+
+.occurrence {
+    -fx-fill: #D7E6CB;
+    -fx-stroke: #D7E6CB;
+    -fx-stroke-width: 1;
+}
+
+.squiggly-error {
+    -fx-stroke: red;
+    -fx-stroke-width: 1;
+}
+.squiggly-warning {
+    -fx-stroke: #FFA500;
+    -fx-stroke-width: 1;
+}
+
+.code-editor > .code-area {
+    -fx-font: 13px "Monospaced";
+    -fx-padding: 0;
+    -fx-content-padding: 5 20 5 20;
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.code-editor > .code-area:focused {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.code-editor > .code-area > .vflow {
+    -fx-background-color: white, #F9F4E0;
+    -fx-background-insets: 0, 1;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar,
+.code-editor > .code-area > .vflow > .vport,
+.code-editor > .code-area > .vflow > .vport > .content {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+}
+
+.code-editor > .code-area > .vflow > .vport > .content > .caret-line {
+    -fx-fill: #F9F4E0;
+}
+
+.code-editor > .code-area > .vflow > .vport > .content > .selection-highlight {
+    -fx-fill: #89BCED;
+}
+
+.code-editor > .code-area > .vflow > .left-side {
+    -fx-background-color: #E9E8E2;
+}
+.code-editor > .code-area > .vflow > .left-side > .line-number-decorator {
+    -fx-padding: 0 5 0 0;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:vertical,
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal {
+    -fx-padding: 0;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal,
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal:focused,
+.code-editor > .code-area > .vflow > .scroll-bar:vertical,
+.code-editor > .code-area > .vflow > .scroll-bar:vertical:focused {
+    -fx-background-color: #F5F5F5;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:vertical > .track,
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal > .track {
+    -fx-background-insets: 0;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal > .track,
+.code-editor > .code-area > .vflow > .scroll-bar:vertical > .track {
+    -fx-background-color: #F5F5F5;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal:focused > .track,
+.code-editor > .code-area > .vflow > .scroll-bar:vertical:focused > .track {
+    -fx-background-color: #EDEDED;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal > .increment-button,
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 5 0 5 0;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:vertical > .increment-button,
+.code-editor > .code-area > .vflow > .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 5 0 5;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar > .increment-button > .increment-arrow,
+.code-editor > .code-area > .vflow > .scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal > .thumb,
+.code-editor > .code-area > .vflow > .scroll-bar:vertical > .thumb {
+    -fx-background-color: transparent, #CFCFCF;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 20;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal:hover > .thumb,
+.code-editor > .code-area > .vflow > .scroll-bar:vertical:hover > .thumb {
+    -fx-background-color: transparent, #B6B6B6;
+}
+
+.code-editor > .code-area > .vflow > .scroll-bar:horizontal:pressed > .thumb,
+.code-editor > .code-area > .vflow > .scroll-bar:vertical:pressed > .thumb {
+    -fx-background-color: transparent, #9C9C9C;
+}
