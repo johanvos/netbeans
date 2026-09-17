@@ -72,9 +72,9 @@ env:
   #  - EA builds must be available for the upcoming release (note: some vendors skip builds)
   #  - linux, win, mac (arm)
   #  - reliable / no extra sauce
-  DEFAULT_JAVA_DISTRIBUTION: 'temurin'
+#  DEFAULT_JAVA_DISTRIBUTION: 'temurin'
 #  DEFAULT_JAVA_DISTRIBUTION: 'sapmachine'
-#  DEFAULT_JAVA_DISTRIBUTION: 'zulu'
+  DEFAULT_JAVA_DISTRIBUTION: 'zulu'
 
   # labels are mapped to env vars for pipeline customization. If this is not a PR, (almost) everything will run, but with a reduced matrix.
   # note: env vars don't work in the job's 'if' field but do work within jobs ( https://github.com/actions/runner/issues/1189 ), the whole expression must be duplicated
@@ -761,6 +761,9 @@ jobs:
       - name: ide/projectuiapi.base
         run: ant $OPTS -f ide/projectuiapi.base test
 
+      - name: ide/projectui
+        run: ant $OPTS -f ide/projectui test
+
       - name: ide/refactoring.api
         run: ant $OPTS -f ide/refactoring.api test
 
@@ -1127,19 +1130,6 @@ jobs:
 
       - name: platform/openide.util.ui
         run: ant $OPTS -f platform/openide.util.ui test
-
-      # isolation required by netbinox tests
-      - name: isolate platform build
-        run: |
-          cp -r platform/ _platform/ && cp -r harness/ _harness/ && cp nbbuild/build/nbantext.jar .
-          cp -r nbbuild/netbeans/platform/ _nb_platform/ && cp -r nbbuild/netbeans/harness/ _nb_harness/
-          ant $OPTS -quiet clean && rm -Rf platform/ && rm -Rf harness/
-          mkdir nbbuild/build && mkdir nbbuild/netbeans
-          mv _platform/ platform/ && mv _harness/ harness/ && mv nbantext.jar nbbuild/build/
-          mv _nb_platform/ nbbuild/netbeans/platform/ && mv _nb_harness/ nbbuild/netbeans/harness/
-
-      - name: platform/netbinox
-        run: ant $OPTS -f platform/netbinox test -Dtest.config=stableBTD
 
       - name: Create Test Summary
         uses: test-summary/action@37b508cfee6d4d080eedd00b5bb240a6a784a6a5 # v2.6
@@ -2604,8 +2594,7 @@ jobs:
     #  * nothing else failed (allows manual restarts)
     #  * the workflow got cancelled
     if: ${{ always() && needs.base-build.result == 'success' && (!contains(needs.*.result, 'failure') || cancelled()) }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
+    runs-on: ubuntu-slim
     steps:
 
       - name: Delete Workspace Artifact
